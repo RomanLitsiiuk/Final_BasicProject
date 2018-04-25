@@ -83,6 +83,13 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+.u-registrationBackground {
+  background: radial-gradient(#FFFD0D, #ffb204);
+  min-height: 470px;
+}
+.u-paddingReg {
+  padding: 20px 5px;
+}
 html,
 body {
   height: 100%;
@@ -102,7 +109,7 @@ body {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
 }
-.MainWrap-container {
+.Container {
   max-width: 960px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -116,7 +123,21 @@ body {
   height: 82px;
   text-align: center;
 }
+.Image {
+  width: 100%;
+}
 .Registration {
-  background: #ffb204;
-  min-height: 470px;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFF;
+}
+.Registration-sliderWrap {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  padding: 0 4px;
+}
+.Registration-formWrap {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  padding: 0 4px;
 }
