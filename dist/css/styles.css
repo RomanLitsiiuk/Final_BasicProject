@@ -1,0 +1,7 @@
+.Turbo {
+  box-shadow: rgba(255, 255, 0, 0.5) inherit;
+  display: grid;
+  border: 1px solid black;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
