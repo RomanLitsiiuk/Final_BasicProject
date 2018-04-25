@@ -108,3 +108,15 @@ body {
   box-sizing: border-box;
   width: 100%;
 }
+.Header {
+  background: #FFF;
+  padding: 16px 0 9px 0;
+}
+.Header-imgWrap {
+  height: 82px;
+  text-align: center;
+}
+.Registration {
+  background: #ffb204;
+  min-height: 470px;
+}
