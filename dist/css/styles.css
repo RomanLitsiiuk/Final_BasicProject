@@ -1,7 +1,110 @@
-.Turbo {
-  box-shadow: rgba(255, 255, 0, 0.5) inherit;
-  display: grid;
-  border: 1px solid black;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+fieldset,
+form,
+menu,
+select,
+textarea,
+input,
+button,
+optgroup {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  background-color: transparent;
+}
+img,
+input,
+button {
+  border: 0;
+}
+input {
+  border-radius: 0;
+}
+input,
+textarea,
+select,
+button,
+a:active,
+a:hover {
+  outline: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+}
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+td,
+th {
+  padding: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+main {
+  display: block;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+.MainWrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100%;
+}
+.MainWrap-content {
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+}
+.MainWrap-footer {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+}
+.MainWrap-container {
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
 }
