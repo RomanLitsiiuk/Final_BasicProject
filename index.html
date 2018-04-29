@@ -6,39 +6,41 @@
     <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
 </head>
 <body>
-    <div class="MainWrap">
-        <main class="MainWrap-content">
+    <div class="MainMarkup">
+        <main class="MainMarkup-topPart">
             <header class="Header">
                 <div class="Header-imgWrap">
                     <img src="src/images/logo.png" alt="Logo">
                 </div>
             </header>
-            <section class="u-registrationBackground u-paddingReg">
-                <div class="Container Registration">
+            <section class="MainMarkup-registrationBackground">
+                <div class="Registration u-container">
                     <div class="Registration-sliderWrap">
-                        <img class="Image" src="src/images/yamahar6.jpg" alt="futureSlider">
+                        <div class="Slider">
+                            <img class="Image" src="src/images/yamahar6.jpg" alt="futureSlider">
+                        </div>
                     </div>
                     <div class="Registration-formWrap">
-                        <div>
-                            <h1></h1>
-                            <div></div>
+                        <div class="RegHeading">
+                            <h1 class="RegHeading-header">Join us now. It's FREE</h1>
+                            <div class="RegHeading-gradientBlock"></div>
                         </div>
                         <form>
-                            <label>
+                            <label>I am
                                 <input type="radio">
                                 <input type="radio">
-                                <img>
-                                <p></p>
+                                <img src="src/images/icons/magnifier.png">
+                                <p>looking for</p>
                                 <input type="radio">
                                 <input type="radio">
                             </label>
-                            <label>
+                            <label>Name
                                 <input type="text">
                             </label>
-                            <label>
+                            <label>Age
                                 <input type="date">
                             </label>
-                            <label>
+                            <label>City
                                 <select>
                                     <option></option>
                                     <option></option>
@@ -58,6 +60,7 @@
                                 <input type="radio">
                                 <input type="radio">
                             </div>
+                            <input type="submit">
                         </form>
                     </div>
                 </div>
@@ -65,7 +68,7 @@
             <section></section>
             <section></section>
         </main>
-        <footer class="MainWrap-footer"></footer>
+        <footer class="MainMarkup-footer"></footer>
     </div>
 </body>
 </html>

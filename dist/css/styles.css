@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
 body,
 h1,
 h2,
@@ -81,47 +81,47 @@ main {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-.u-registrationBackground {
-  background: radial-gradient(#FFFD0D, #ffb204);
-  min-height: 470px;
-}
-.u-paddingReg {
-  padding: 20px 5px;
+.u-container {
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
 }
 html,
 body {
   height: 100%;
 }
-.MainWrap {
+.MainMarkup {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   height: 100%;
 }
-.MainWrap-content {
+.MainMarkup-topPart {
   -ms-flex: 1 0 auto;
       flex: 1 0 auto;
 }
-.MainWrap-footer {
+.MainMarkup-registrationBackground {
+  background: radial-gradient(circle at 25% 50%, rgba(255, 210, 13, 0.5) 25%, rgba(255, 138, 32, 0.5) 40%), radial-gradient(circle at 75% 50%, rgba(255, 210, 13, 0.8) 25%, rgba(255, 138, 32, 0.9) 40%);
+  padding: 20px 0 18px 0;
+}
+.MainMarkup-footer {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
 }
-.Container {
-  max-width: 960px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  width: 100%;
-}
 .Header {
-  background: #FFF;
   padding: 16px 0 9px 0;
 }
 .Header-imgWrap {
   height: 82px;
   text-align: center;
+}
+.Slider {
+  box-sizing: border-box;
+  margin-bottom: -4px;
 }
 .Image {
   width: 100%;
@@ -132,12 +132,39 @@ body {
   background: #FFF;
 }
 .Registration-sliderWrap {
+  box-sizing: border-box;
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
-  padding: 0 4px;
+  border-right: 1px solid #C7C7C7;
+  padding: 0 10px;
 }
 .Registration-formWrap {
+  box-sizing: border-box;
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
-  padding: 0 4px;
+  padding: 0 10px;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 1px solid #C7C7C7;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.RegHeading {
+  position: relative;
+  padding: 10px;
+}
+.RegHeading-header {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #ffa400;
+}
+.RegHeading-gradientBlock {
+  position: absolute;
+  left: 10px;
+  right: 50px;
+  top: 10px;
+  bottom: 10px;
+  background: linear-gradient(to bottom, #ffffff 5%, transparent 80%);
 }

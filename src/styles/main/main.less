@@ -3,23 +3,22 @@ body {
 	height: 100%;
 }
 
-.MainWrap {
+.MainMarkup {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 
-	&-content {
+	&-topPart {
 		flex: 1 0 auto;
+	}
+
+	&-registrationBackground {
+		background: radial-gradient(circle at 25% 50%, rgba(255, 210, 13, 0.5) 25%, rgba(255, 138, 32, 0.5) 40%),
+		radial-gradient(circle at 75% 50%, rgba(255, 210, 13, 0.8) 25%, rgba(255, 138, 32, 0.9) 40%);
+		padding: 20px 0 18px 0;
 	}
 
 	&-footer {
 		flex: 0 0 auto;
 	}
-}
-
-.Container {
-	max-width: 960px;
-	margin: 0 auto;
-	box-sizing: border-box;
-	width: 100%;
 }
