@@ -25,42 +25,80 @@
                             <h1 class="RegHeading-header">Join us now. It's FREE</h1>
                             <div class="RegHeading-gradientBlock"></div>
                         </div>
-                        <form>
-                            <label>I am
-                                <input type="radio">
-                                <input type="radio">
-                                <img src="src/images/icons/magnifier.png">
-                                <p>looking for</p>
-                                <input type="radio">
-                                <input type="radio">
-                            </label>
-                            <label>Name
-                                <input type="text">
-                            </label>
-                            <label>Age
-                                <input type="date">
-                            </label>
-                            <label>City
-                                <select>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                </select>
-                            </label>
-                            <div>
-                                <input type="checkbox">
-                                <input type="checkbox">
+                        <form class="InformationForm">
+                            <div class="InformationForm-labelBlock">
+                                <p class="InformationForm-labelBlock--textPadding">I am</p>
+                                <p class="InformationForm-labelBlock--textPadding">Name</p>
+                                <p class="InformationForm-labelBlock--textPadding">Age</p>
+                                <p class="InformationForm-labelBlock--textPadding">City</p>
                             </div>
-                            <div>
-                                <input type="radio">
-                                <input type="radio">
+                            <div class="InformationForm-inputBlock">
+                                <div class="Gender u-formpadding">
+                                    <div class="Gender-userChoose">
+                                        <input type="radio">
+                                        <input type="radio">
+                                    </div>
+                                    <img class="Gender-searchIcon" src="src/images/icons/magnifier.png">
+                                    <p class="Gender-userText">looking for</p>
+                                    <div class="Gender-userChoose">
+                                        <input type="radio">
+                                        <input type="radio">
+                                    </div>
+                                </div>
+                                <div class="Name u-formpadding">
+                                    <input class="Name-nameField" type="text">
+                                </div>
+                                <div class="Age u-formpadding">
+                                    <select class="Age-day">
+                                        <option>25</option>
+                                        <option>30</option>
+                                    </select>
+                                    <select class="Age-month">
+                                        <option>May</option>
+                                        <option>April</option>
+                                    </select>
+                                    <select class="Age-year">
+                                        <option>1992</option>
+                                        <option>2008</option>
+                                    </select>
+                                </div>
+                                <div class="City u-formpadding">
+                                    <select class="City-checkField">
+                                        <option>Vancover</option>
+                                        <option>Bratislava</option>
+                                        <option>Springfield</option>
+                                        <option>Marocco</option>
+                                        <option>Mexiko</option>
+                                        <option>Ryadh</option>
+                                        <option>Namche-bazar</option>
+                                        <option>Gviana</option>
+                                    </select>
+                                </div>
+                                <div class="AdditionalInfo">
+                                    <div class="AdditionalInfo-checkBox">
+                                        <div class="u-padding105">
+                                            <input id="cool" type="checkbox">
+                                            <label for="cool">I'm cool</label>
+                                        </div>
+                                        <div class="u-padding510">
+                                            <input id="good" type="checkbox">
+                                            <label for="good">Life's good</label>
+                                        </div>
+                                    </div>
+                                    <div class="AdditionalInfo-radio">
+                                        <div class="u-padding105">
+                                            <input id="tee" type="radio" value="tee" name="drink">
+                                            <label for="tee">Tee</label>
+                                        </div>
+                                        <div class="u-padding510">
+                                            <input id="beer" type="radio" value="beer" name="drink">
+                                            <label for="beer">Beer</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit">
                             </div>
-                            <input type="submit">
+                            <div class="InformationForm-stateBlock"></div>
                         </form>
                     </div>
                 </div>

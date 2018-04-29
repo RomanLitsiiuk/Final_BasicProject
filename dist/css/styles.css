@@ -83,11 +83,27 @@ html,
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+.inputField {
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
 .u-container {
   max-width: 960px;
   margin: 0 auto;
   box-sizing: border-box;
   width: 100%;
+}
+.u-formpadding {
+  padding: 7px 0;
+}
+.u-padding105 {
+  padding: 10px 0 5px;
+}
+.u-padding510 {
+  padding: 5px 0 10px;
 }
 html,
 body {
@@ -119,10 +135,6 @@ body {
   height: 82px;
   text-align: center;
 }
-.Slider {
-  box-sizing: border-box;
-  margin-bottom: -4px;
-}
 .Image {
   width: 100%;
 }
@@ -143,11 +155,7 @@ body {
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
   padding: 0 10px;
-  display: -ms-flexbox;
-  display: flex;
   border-left: 1px solid #C7C7C7;
-  -ms-flex-direction: column;
-      flex-direction: column;
 }
 .RegHeading {
   position: relative;
@@ -167,4 +175,133 @@ body {
   top: 10px;
   bottom: 10px;
   background: linear-gradient(to bottom, #ffffff 5%, transparent 80%);
+}
+.InformationForm {
+  display: -ms-flexbox;
+  display: flex;
+}
+.InformationForm-labelBlock {
+  -ms-flex: 0 1 110px;
+      flex: 0 1 110px;
+}
+.InformationForm-labelBlock--textPadding {
+  padding: 12px 10px;
+}
+.InformationForm-inputBlock {
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+}
+.InformationForm-stateBlock {
+  -ms-flex: 0 1 30px;
+      flex: 0 1 30px;
+}
+.Slider {
+  box-sizing: border-box;
+  margin-bottom: -4px;
+}
+.Gender {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.Gender-userText {
+  width: 80px;
+  padding-left: 10px;
+}
+.Gender-searchIcon {
+  width: 15px;
+  height: 15px;
+}
+.Name {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.Name-nameField {
+  padding-left: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.Name-validField {
+  width: 40px;
+}
+.Age {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.Age-day {
+  padding-left: 8px;
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.Age-month {
+  padding-left: 8px;
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.Age-year {
+  padding-left: 8px;
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.City {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.City-checkField {
+  padding-left: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.AdditionalInfo {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+}
+.AdditionalInfo-checkBox {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.AdditionalInfo-radio {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
