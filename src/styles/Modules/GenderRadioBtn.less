@@ -1,0 +1,82 @@
+.GenderRadioBtn {
+  width: 95px;
+  height: 36px;
+  display: flex;
+
+  &-maleBtn {
+    visibility: hidden;
+    width: 48px;
+    height: 36px;
+
+    &:after {
+      content: '';
+      visibility: visible;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 48px;
+      height: 36px;
+      border: 1px solid #c28402;
+      border-radius: 0 18px 18px 0;
+      margin-left: -1px;
+      background-image: url("../../src/images/icons/Mor.svg");
+      background-repeat: no-repeat;
+      box-shadow: 0 -10px 10px rgba(0,0,0,0.1) inset,
+      1px 1px 1px rgba(0,0,0,0.5);
+      background-position: 40% 50%;
+    }
+
+    &:checked:after {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      width: 48px;
+      height: 36px;
+      border: 1px solid #c28402;
+      border-radius: 0 18px 18px 0;
+      background-color: #ffa906;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,
+      0 1px 1px rgba(0,0,0,0.5) inset;
+      background-image: url("../../src/images/icons/Mwh.svg");
+      background-repeat: no-repeat;
+      background-position: 40% 45%;
+    }
+  }
+
+  &-femaleBtn {
+    visibility: hidden;
+    width: 48px;
+    height: 36px;
+
+    &:after {
+      content: '';
+      visibility: visible;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 48px;
+      height: 36px;
+      border: 1px solid #c28402;
+      border-radius: 18px 0 0 18px;
+      box-shadow: 0 -10px 10px rgba(0,0,0,0.1) inset,
+      0 1px 1px rgba(0,0,0,0.5);
+      background-image: url("../../src/images/icons/Wor.svg");
+      background-repeat: no-repeat;
+      background-position: 60% 50%;
+    }
+
+    &:checked:after {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      width: 48px;
+      height: 36px;
+      border: 1px solid #c28402;
+      border-radius: 18px 0 0 18px;
+      background-color: #ffa906;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,
+      0 1px 1px rgba(0,0,0,0.5) inset;
+      background-image: url("../../src/images/icons/Wwh.svg");
+      background-repeat: no-repeat;
+      background-position: 60% 45%;
+    }
+  }
+}
