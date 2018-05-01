@@ -476,3 +476,38 @@ body {
   box-shadow: 0 0 2px #79ab00 inset;
   background-image: linear-gradient(to top, #72aa00 52%, rgba(114, 170, 0, 0.5) 52%);
 }
+.CentralBlock {
+  display: -ms-flexbox;
+  display: flex;
+}
+.CentralBlock-descriptionWrap {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  box-sizing: border-box;
+}
+.CentralBlock-userListWrap {
+  -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+  box-sizing: border-box;
+}
+.Description {
+  padding: 10px;
+}
+.Description-header {
+  font-weight: 300;
+  font-size: 20pt;
+  padding: 20px 0;
+}
+.Description-image {
+  margin-left: -10px;
+  float: left;
+  width: 173px;
+  height: 173px;
+  shape-outside: circle(50%);
+  padding: 10px 10px 0 0;
+}
+.Description-text {
+  text-align: justify;
+  font-size: 11.5pt;
+  font-weight: 400;
+}
