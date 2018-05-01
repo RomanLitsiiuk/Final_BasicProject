@@ -99,12 +99,6 @@ body {
 .u-formpadding {
   padding: 7px 0;
 }
-.u-padding105 {
-  padding: 10px 0 5px;
-}
-.u-padding510 {
-  padding: 5px 0 10px;
-}
 .u-padding1010 {
   padding: 10px 0;
 }
@@ -248,7 +242,8 @@ body {
       justify-content: space-between;
 }
 .Age-day {
-  padding-left: 8px;
+  padding-left: 14px;
+  width: 85px;
   box-sizing: border-box;
   height: 36px;
   border: 1px solid #d8d8d8;
@@ -256,7 +251,8 @@ body {
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .Age-month {
-  padding-left: 8px;
+  padding-left: 14px;
+  width: 120px;
   box-sizing: border-box;
   height: 36px;
   border: 1px solid #d8d8d8;
@@ -264,7 +260,8 @@ body {
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .Age-year {
-  padding-left: 8px;
+  padding-left: 14px;
+  width: 105px;
   box-sizing: border-box;
   height: 36px;
   border: 1px solid #d8d8d8;
@@ -292,7 +289,7 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-.AdditionalInfo-checkBox {
+.AdditionalInfo-checkBoxBlock {
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
   display: -ms-flexbox;
@@ -300,13 +297,73 @@ body {
   -ms-flex-direction: column;
       flex-direction: column;
 }
-.AdditionalInfo-radio {
+.AdditionalInfo-radioBlock {
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+.CheckBlock {
+  padding: 8px 0;
+}
+.CheckBlock-btn {
+  visibility: hidden;
+}
+.CheckBlock-btn:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d0d0d0;
+  display: inline-block;
+  visibility: visible;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1) inset, 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+.CheckBlock-btn:checked:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  padding: 1px;
+  background-color: #ffa500;
+  background-clip: content-box;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.CheckBlock-label {
+  padding-left: 10px;
+}
+.RadioBlock {
+  padding: 8px 0;
+}
+.RadioBlock-btn {
+  visibility: hidden;
+}
+.RadioBlock-btn:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  display: inline-block;
+  visibility: visible;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1) inset, 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+.RadioBlock-btn:checked:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  padding: 1px;
+  border-radius: 50%;
+  background-color: #ffa500;
+  background-clip: content-box;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.RadioBlock-label {
+  padding-left: 10px;
 }
 .Submit {
   width: 100%;
@@ -323,6 +380,5 @@ body {
 }
 .Submit:active {
   box-shadow: 0 0 2px #79ab00 inset;
-  text-shadow: none;
   background-image: linear-gradient(to top, #72aa00 52%, rgba(114, 170, 0, 0.5) 52%);
 }

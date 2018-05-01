@@ -1,0 +1,36 @@
+.RadioBlock {
+  padding: 8px 0;
+
+  &-btn {
+    visibility: hidden;
+
+    &:after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 1px solid #d0d0d0;
+      border-radius: 50%;
+      display: inline-block;
+      visibility: visible;
+      box-shadow: 0 -5px 10px rgba(0,0,0,0.1) inset,
+      1px 1px 1px rgba(0,0,0,0.5);
+      box-sizing: border-box;
+    }
+
+    &:checked:after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      padding: 1px;
+      border-radius: 50%;
+      background-color: #ffa500;
+      background-clip: content-box;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+  }
+
+  &-label {
+    padding-left: 10px;
+  }
+}
