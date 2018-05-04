@@ -28,6 +28,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .lSSlide2Wrapper > .lightSlider2:after {
   clear: both;
 }
@@ -53,7 +54,6 @@
   left: 0;
   z-index: 9;
   margin-right: 0;
-  width: 100%;
 }
 .lSSlide2Wrapper.usingCss .lSFade > * {
   opacity: 0;
@@ -65,6 +65,7 @@
   transition-property: opacity;
   -webkit-transition-timing-function: inherit !important;
   transition-timing-function: inherit !important;
+  width: 100%;
 }
 .lSSlide2Wrapper .lSFade > *.active {
   z-index: 10;
@@ -173,8 +174,8 @@
   opacity: 1;
   -webkit-transition: opacity 0.35s linear 0s;
   transition: opacity 0.35s linear 0s;
-  overflow: visible;
 }
+
 .lSAction2 > a:hover {
   opacity: 1;
   box-shadow: 0 0 2px rgba(0,0,0,1) inset;
@@ -186,6 +187,7 @@
 .lSAction2 > .lSNext {
   background-position: -32px 0;
   right: 10px;
+  overflow: visible;
 }
 .lSAction2 > a.disabled {
   pointer-events: none;
