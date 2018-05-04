@@ -1,0 +1,405 @@
+/*! lightslider - v1.1.3 - 2015-04-14
+* https://github.com/sachinchoolur/lightslider
+* Copyright (c) 2015 Sachin N; Licensed MIT */
+/** /!!! core css Should not edit !!!/**/
+
+.lSSlide2Outer {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  margin-bottom: -4px;
+  max-width: 400px;
+}
+.lightSlider2:before, .lightSlider2:after {
+  content: " ";
+  display: table;
+}
+.lightSlider2 {
+  overflow: hidden;
+  margin: 5px;
+}
+.lSSlide2Wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.lSSlide2Wrapper > .lightSlider2:after {
+  clear: both;
+}
+.lSSlide2Wrapper .lSSlide2 {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: all 1s;
+  -webkit-transition-property: -webkit-transform,height;
+  -moz-transition-property: -moz-transform,height;
+  transition-property: transform,height;
+  -webkit-transition-duration: inherit !important;
+  transition-duration: inherit !important;
+  -webkit-transition-timing-function: inherit !important;
+  transition-timing-function: inherit !important;
+}
+.lSSlide2Wrapper .lSFade {
+  position: relative;
+}
+.lSSlide2Wrapper .lSFade > * {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  margin-right: 0;
+  width: 100%;
+}
+.lSSlide2Wrapper.usingCss .lSFade > * {
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-duration: inherit !important;
+  transition-duration: inherit !important;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: inherit !important;
+  transition-timing-function: inherit !important;
+}
+.lSSlide2Wrapper .lSFade > *.active {
+  z-index: 10;
+}
+.lSSlide2Wrapper.usingCss .lSFade > *.active {
+  opacity: 1;
+}
+/** /!!! End of core css Should not edit !!!/**/
+
+/* Pager */
+.lSSlide2Outer .lSPager2.lSpg {
+  /*margin: 10px 0 0;*/
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+}
+.lSSlide2Outer .lSPager2.lSpg > li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+}
+.lSSlide2Outer .lSPager2.lSpg > li a {
+  display: none;
+  /*background-color: rgba(0,0,0,0.4);
+  box-shadow: 0 0 5px 2px rgba(255,255,255,0.5);
+  border-radius: 30px;
+  display: inline-block;
+  height: 11px;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 11px;
+  position: relative;
+  z-index: 99;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;*/
+}
+/*.lSSlide2Outer .lSPager2.lSpg > li:hover a, .lSSlide2Outer .lSPager2.lSpg > li.active a {
+  background-color: #ffa500;
+  box-shadow: 0 0 5px 2px rgba(255,255,255,0.5),
+  0 0 1px 2px rgba(0,0,0,0.5) inset;
+}*/
+.lSSlide2Outer .media {
+  opacity: 0.8;
+}
+.lSSlide2Outer .media.active {
+  opacity: 1;
+}
+/* End of pager */
+
+/** Gallery */
+.lSSlide2Outer .lSPager2.lSGallery2 {
+  list-style: none outside none;
+  padding-left: 0;
+  margin: 0;
+  overflow: hidden;
+  transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.lSSlide2Outer .lSPager2.lSGallery2 li {
+  overflow: hidden;
+  -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+  transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+}
+.lSSlide2Outer .lSPager2.lSGallery2 li.active, .lSSlide2Outer .lSPager2.lSGallery2 li:hover {
+  border-radius: 5px;
+}
+.lSSlide2Outer .lSPager2.lSGallery2 img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.lSSlide2Outer .lSPager2.lSGallery2:before, .lSSlide2Outer .lSPager2.lSGallery2:after {
+  content: " ";
+  display: table;
+}
+.lSSlide2Outer .lSPager2.lSGallery2:after {
+  clear: both;
+}
+/* End of Gallery*/
+
+/* slider actions */
+.lSAction2 > a {
+  width: 32px;
+  display: block;
+  top: 50%;
+  height: 32px;
+  background-image: url('../../src/images/icons/controls2.png');
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  margin-top: -16px;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s linear 0s;
+  transition: opacity 0.35s linear 0s;
+  overflow: visible;
+}
+.lSAction2 > a:hover {
+  opacity: 1;
+  box-shadow: 0 0 2px rgba(0,0,0,1) inset;
+}
+.lSAction2 > .lSPrev {
+  background-position: 0 0;
+  left: 10px;
+}
+.lSAction2 > .lSNext {
+  background-position: -32px 0;
+  right: 10px;
+}
+.lSAction2 > a.disabled {
+  pointer-events: none;
+}
+.cS-hidden {
+  height: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}
+
+
+/* vertical */
+.lSSlide2Outer.vertical {
+  position: relative;
+}
+.lSSlide2Outer.vertical.noPager {
+  padding-right: 0px !important;
+}
+.lSSlide2Outer.vertical .lSGallery2 {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+.lSSlide2Outer.vertical .lightSlider2 > * {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* vertical controlls */
+.lSSlide2Outer.vertical .lSAction2 > a {
+  left: 50%;
+  margin-left: -14px;
+  margin-top: 0;
+}
+.lSSlide2Outer.vertical .lSAction2 > .lSNext {
+  background-position: 31px -31px;
+  bottom: 10px;
+  top: auto;
+}
+.lSSlide2Outer.vertical .lSAction2 > .lSPrev {
+  background-position: 0 -31px;
+  bottom: auto;
+  top: 10px;
+}
+/* vertical */
+
+
+/* Rtl */
+.lSSlide2Outer.lSrtl {
+  direction: rtl;
+}
+.lSSlide2Outer .lightSlider2, .lSSlide2Outer .lSPager2 {
+  padding-left: 0;
+  list-style: none outside none;
+}
+.lSSlide2Outer.lSrtl .lightSlider2, .lSSlide2Outer.lSrtl .lSPager2 {
+  padding-right: 0;
+}
+.lSSlide2Outer .lightSlider2 > *,  .lSSlide2Outer .lSGallery2 li {
+  float: left;
+}
+.lSSlide2Outer.lSrtl .lightSlider2 > *,  .lSSlide2Outer.lSrtl .lSGallery2 li {
+  float: right !important;
+}
+/* Rtl */
+
+@-webkit-keyframes rightEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes rightEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes topEnd {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -15px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@keyframes topEnd {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -15px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 15px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes bottomEnd {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -15px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes bottomEnd {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -15px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+.lSSlide2Outer .rightEnd {
+  -webkit-animation: rightEnd 0.3s;
+  animation: rightEnd 0.3s;
+  position: relative;
+}
+.lSSlide2Outer .leftEnd {
+  -webkit-animation: leftEnd 0.3s;
+  animation: leftEnd 0.3s;
+  position: relative;
+}
+.lSSlide2Outer.vertical .rightEnd {
+  -webkit-animation: topEnd 0.3s;
+  animation: topEnd 0.3s;
+  position: relative;
+}
+.lSSlide2Outer.vertical .leftEnd {
+  -webkit-animation: bottomEnd 0.3s;
+  animation: bottomEnd 0.3s;
+  position: relative;
+}
+.lSSlide2Outer.lSrtl .rightEnd {
+  -webkit-animation: leftEnd 0.3s;
+  animation: leftEnd 0.3s;
+  position: relative;
+}
+.lSSlide2Outer.lSrtl .leftEnd {
+  -webkit-animation: rightEnd 0.3s;
+  animation: rightEnd 0.3s;
+  position: relative;
+}
+/*/  GRab cursor */
+.lightSlider2.lsGrab > * {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.lightSlider2.lsGrabbing > * {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
+}

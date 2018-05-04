@@ -1,7 +1,7 @@
 (function ($, undefined) {
     'use strict';
     var defaults = {
-        item: 1,
+        item: 5,
         autoWidth: true,
         slideMove: 1,
         slideMargin: 10,
@@ -13,7 +13,7 @@
         speed: 400, //ms'
         auto: false,
         pauseOnHover: false,
-        loop: false,
+        loop: true,
         slideEndAnimation: true,
         pause: 2000,
         keyPress: false,
@@ -45,14 +45,14 @@
         onBeforePrevSlide: function ($el, scene) {}
         /* jshint ignore:end */
     };
-    $.fn.lightSlider = function (options) {
+    $.fn.lightSlider2 = function (options) {
         if (this.length === 0) {
             return this;
         }
 
         if (this.length > 1) {
             this.each(function () {
-                $(this).lightSlider(options);
+                $(this).lightSlider2(options);
             });
             return this;
         }
@@ -182,17 +182,17 @@
             },
             controls: function () {
                 if (settings.controls) {
-                    $el.after('<div class="lSAction"><a class="lSPrev">' + settings.prevHtml + '</a><a class="lSNext">' + settings.nextHtml + '</a></div>');
+                    $el.after('<div class="lSAction2"><a class="lSPrev">' + settings.prevHtml + '</a><a class="lSNext">' + settings.nextHtml + '</a></div>');
                     if (!settings.autoWidth) {
                         if (length <= settings.item) {
-                            $slide.find('.lSAction').hide();
+                            $slide.find('.lSAction2').hide();
                         }
                     } else {
                         if (refresh.calWidth(false) < elSize) {
-                            $slide.find('.lSAction').hide();
+                            $slide.find('.lSAction2').hide();
                         }
                     }
-                    $slide.find('.lSAction a').on('click', function (e) {
+                    $slide.find('.lSAction2 a').on('click', function (e) {
                         if (e.preventDefault) {
                             e.preventDefault();
                         } else {
@@ -226,8 +226,8 @@
                 }
                 settings.onBeforeStart.call(this, $el);
                 refresh.chbreakpoint();
-                $el.addClass('lightSlider').wrap('<div class="lSSlideOuter ' + settings.addClass + '"><div class="lSSlideWrapper"></div></div>');
-                $slide = $el.parent('.lSSlideWrapper');
+                $el.addClass('lightSlider2').wrap('<div class="lSSlide2Outer ' + settings.addClass + '"><div class="lSSlide2Wrapper"></div></div>');
+                $slide = $el.parent('.lSSlide2Wrapper');
                 if (settings.rtl === true) {
                     $slide.parent().addClass('lSrtl');
                 }
@@ -378,27 +378,27 @@
                         }
                     }
                     var $cSouter = $slide.parent();
-                    $cSouter.find('.lSPager').html(pagers); 
+                    $cSouter.find('.lSPager2').html(pagers);
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
-                            $cSouter.find('.lSPager').css('width', settings.vThumbWidth + 'px');
+                            $cSouter.find('.lSPager2').css('width', settings.vThumbWidth + 'px');
                         }
                         pagerWidth = (i * (settings.thumbMargin + thumbWidth)) + 0.5;
-                        $cSouter.find('.lSPager').css({
+                        $cSouter.find('.lSPager2').css({
                             property: pagerWidth + 'px',
                             'transition-duration': settings.speed + 'ms'
                         });
                         if (settings.vertical === true) {
                             $slide.parent().css('padding-right', (settings.vThumbWidth + settings.galleryMargin) + 'px');
                         }
-                        $cSouter.find('.lSPager').css(property, pagerWidth + 'px');
+                        $cSouter.find('.lSPager2').css(property, pagerWidth + 'px');
                     }
-                    var $pager = $cSouter.find('.lSPager').find('li');
+                    var $pager = $cSouter.find('.lSPager2').find('li');
                     $pager.first().addClass('active');
                     $pager.on('click', function () {
                         if (settings.loop === true && settings.mode === 'slide') {
-                            scene = scene + ($pager.index(this) - $cSouter.find('.lSPager').find('li.active').index());
+                            scene = scene + ($pager.index(this) - $cSouter.find('.lSPager2').find('li.active').index());
                         } else {
                             scene = $pager.index(this);
                         }
@@ -412,11 +412,11 @@
                 if (settings.pager) {
                     var cl = 'lSpg';
                     if (settings.gallery) {
-                        cl = 'lSGallery';
+                        cl = 'lSGallery2';
                     }
-                    $slide.after('<ul class="lSPager ' + cl + '"></ul>');
+                    $slide.after('<ul class="lSPager2 ' + cl + '"></ul>');
                     var gMargin = (settings.vertical) ? 'margin-left' : 'margin-top';
-                    $slide.parent().find('.lSPager').css(gMargin, settings.galleryMargin + 'px');
+                    $slide.parent().find('.lSPager2').css(gMargin, settings.galleryMargin + 'px');
                     refresh.createPager();
                 }
 
@@ -550,12 +550,12 @@
                         }, settings.speed, settings.easing);
                     }
                 }
-                var $thumb = $slide.parent().find('.lSPager').find('li');
+                var $thumb = $slide.parent().find('.lSPager2').find('li');
                 this.active($thumb, true);
             },
             fade: function () {
                 this.active($children, false);
-                var $thumb = $slide.parent().find('.lSPager').find('li');
+                var $thumb = $slide.parent().find('.lSPager2').find('li');
                 this.active($thumb, true);
             },
             slide: function () {
@@ -584,7 +584,7 @@
             },
             resetSlide: function (s) {
                 var $this = this;
-                $slide.find('.lSAction a').addClass('disabled');
+                $slide.find('.lSAction2 a').addClass('disabled');
                 setTimeout(function () {
                     scene = s;
                     $slide.css('transition-duration', '0ms');
@@ -593,7 +593,7 @@
                     plugin.move($el, slideValue);
                     setTimeout(function () {
                         $slide.css('transition-duration', settings.speed + 'ms');
-                        $slide.find('.lSAction a').removeClass('disabled');
+                        $slide.find('.lSAction2 a').removeClass('disabled');
                     }, 50);
                 }, settings.speed + 100);
             },
@@ -622,7 +622,7 @@
                     position = elSize - thumbWidth;
                 }
                 var sc = scene - $el.find('.clone.left').length;
-                var $pager = $slide.parent().find('.lSPager');
+                var $pager = $slide.parent().find('.lSPager2');
                 if (settings.mode === 'slide' && settings.loop === true) {
                     if (sc >= $pager.children().length) {
                         sc = 0;
@@ -657,7 +657,7 @@
                     });
                     $slide.on('mouseleave',function(){
                         $(this).removeClass('ls-hover');
-                        if (!$slide.find('.lightSlider').hasClass('lsGrabbing')) {
+                        if (!$slide.find('.lightSlider2').hasClass('lsGrabbing')) {
                             $this.auto();
                         }
                     });
@@ -753,7 +753,7 @@
                     var startCoords = 0,
                         endCoords = 0,
                         isDraging = false;
-                    $slide.find('.lightSlider').addClass('lsGrab');
+                    $slide.find('.lightSlider2').addClass('lsGrab');
                     $slide.on('mousedown', function (e) {
                         if (w < elSize) {
                             if (w !== 0) {
@@ -772,7 +772,7 @@
                             $slide.scrollLeft += 1;
                             $slide.scrollLeft -= 1;
                             // *
-                            $slide.find('.lightSlider').removeClass('lsGrab').addClass('lsGrabbing');
+                            $slide.find('.lightSlider2').removeClass('lsGrab').addClass('lsGrabbing');
                             clearInterval(interval);
                         }
                     });
@@ -784,7 +784,7 @@
                     });
                     $(window).on('mouseup', function (e) {
                         if (isDraging) {
-                            $slide.find('.lightSlider').removeClass('lsGrabbing').addClass('lsGrab');
+                            $slide.find('.lightSlider2').removeClass('lsGrabbing').addClass('lsGrab');
                             isDraging = false;
                             endCoords = (settings.vertical === true) ? e.pageY : e.pageX;
                             var distance = endCoords - startCoords;
@@ -906,7 +906,7 @@
             }
             refresh.calL();
             if (settings.mode === 'slide') {
-                $el.removeClass('lSSlide');
+                $el.removeClass('lSSlide2');
             }
             if (settings.mode === 'slide') {
                 refresh.calSW();
@@ -914,7 +914,7 @@
             }
             setTimeout(function () {
                 if (settings.mode === 'slide') {
-                    $el.addClass('lSSlide');
+                    $el.addClass('lSSlide2');
                 }
             }, 1000);
             if (settings.pager) {
@@ -942,15 +942,15 @@
             }
             if (settings.autoWidth === false) {
                 if ($children.length <= settings.item) {
-                    $slide.find('.lSAction').hide();
+                    $slide.find('.lSAction2').hide();
                 } else {
-                    $slide.find('.lSAction').show();
+                    $slide.find('.lSAction2').show();
                 }
             } else {
                 if ((refresh.calWidth(false) < elSize) && (w !== 0)) {
-                    $slide.find('.lSAction').hide();
+                    $slide.find('.lSAction2').hide();
                 } else {
-                    $slide.find('.lSAction').show();
+                    $slide.find('.lSAction2').show();
                 }
             }
         };
@@ -1017,7 +1017,7 @@
             if (on === false) {
                 if (settings.mode === 'slide') {
                     if (plugin.doCss()) {
-                        $el.addClass('lSSlide');
+                        $el.addClass('lSSlide2');
                         if (settings.speed !== '') {
                             $slide.css('transition-duration', settings.speed + 'ms');
                         }
@@ -1096,7 +1096,7 @@
             }
         };
         $el.destroy = function () {
-            if ($el.lightSlider) {
+            if ($el.lightSlider2) {
                 $el.goToPrevSlide = function(){};
                 $el.goToNextSlide = function(){};
                 $el.mode = function(){};
@@ -1106,12 +1106,12 @@
                 $el.getCurrentSlideCount = function(){};
                 $el.getTotalSlideCount = function(){};
                 $el.goToSlide = function(){}; 
-                $el.lightSlider = null;
+                $el.lightSlider2 = null;
                 refresh = {
                     init : function(){}
                 };
-                $el.parent().parent().find('.lSAction, .lSPager').remove();
-                $el.removeClass('lightSlider lSFade lSSlide lsGrab lsGrabbing leftEnd right').removeAttr('style').unwrap().unwrap();
+                $el.parent().parent().find('.lSAction2, .lSPager2').remove();
+                $el.removeClass('lightSlider2 lSFade lSSlide2 lsGrab lsGrabbing leftEnd right').removeAttr('style').unwrap().unwrap();
                 $el.children().removeAttr('style');
                 $children.removeClass('lslide active');
                 $el.find('.clone').remove();
