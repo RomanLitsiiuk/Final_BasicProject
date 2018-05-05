@@ -70,11 +70,11 @@ self.multirange = function(input) {
 	ghost.addEventListener("input", update);
 
 	update();
-}
+};
 
 multirange.init = function() {
 	[].slice.call(document.querySelectorAll("input[type=range][multiple]:not(.multirange)")).forEach(multirange);
-}
+};
 
 if (document.readyState == "loading") {
 	document.addEventListener("DOMContentLoaded", multirange.init);

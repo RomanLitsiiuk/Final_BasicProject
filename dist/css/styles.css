@@ -1285,3 +1285,12 @@ body {
 .ActiveButtons {
   padding: 10px 5px 10px 10px;
 }
+.TextSection-textBlock {
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  text-align: justify;
+}
