@@ -1,0 +1,26 @@
+.NumberList {
+  font-size: 11pt;
+  font-weight: 500;
+  padding: 0 0 10px 0;
+  counter-reset: myCounter;
+
+  &-item {
+    list-style: none;
+    line-height: 22px;
+    padding-bottom: 5px;
+
+    &:before {
+      counter-increment: myCounter;
+      content:counter(myCounter) '.';
+      color: #ccc;
+      font-weight: bold;
+      font-size: 9pt;
+      padding-right: 4px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #ffa352;
+    }
+  }
+}

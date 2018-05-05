@@ -100,8 +100,14 @@ body {
 .u-formpadding {
   padding: 7px 0;
 }
-.u-padding1010 {
-  padding: 10px 0;
+.u-paddingB10 {
+  padding: 0 0 10px 0;
+}
+.u-paddingT20B20 {
+  padding: 20px 0;
+}
+.u-paddingT10B30 {
+  padding: 10px 5px 30px;
 }
 html,
 body {
@@ -863,7 +869,7 @@ body {
 }
 .Description-header {
   font-weight: 300;
-  font-size: 20pt;
+  font-size: 22pt;
   padding: 20px 0;
 }
 .Description-image {
@@ -889,8 +895,7 @@ body {
 }
 .UserList-header {
   font-weight: 300;
-  font-size: 20pt;
-  padding: 20px 0;
+  font-size: 22pt;
 }
 .UserList-sliderWrap {
   max-width: 400px;
@@ -1285,14 +1290,58 @@ body {
 .ActiveButtons {
   padding: 10px 5px 10px 10px;
 }
-.TextSection-textBlock {
+.TextSection {
   -webkit-column-count: 3;
      -moz-column-count: 3;
           column-count: 3;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
-  text-align: justify;
+  padding: 20px 0;
+}
+.TextSection-paragraph {
+  font-weight: 500;
+  font-size: 11pt;
+  padding-bottom: 10px;
+}
+.TextSection-leftLineText {
+  border-left: 2px solid #ffa352;
+  padding-left: 10px;
+  margin: 10px 0;
+  color: #ffa352;
+  font-weight: bold;
+  font-size: 11pt;
+}
+.TextSection-blockquote {
+  font-style: italic;
+  color: #ccc;
+  font-size: 11pt;
+  position: relative;
+  padding: 10px 15px 10px 10px;
+}
+.TextSection-blockquote:before {
+  position: absolute;
+  top: -5px;
+  left: -13px;
+  color: #bbb;
+  content: "\201C";
+  font-style: normal;
+  font-size: 46pt;
+}
+.TextSection-blockquote:after {
+  position: absolute;
+  bottom: -38px;
+  right: -5px;
+  color: #bbb;
+  content: "\201D";
+  font-style: normal;
+  font-size: 46pt;
+}
+.TextSection-link {
+  display: block;
+  text-align: right;
+  padding: 20px 0;
+  color: #ffa352;
 }
 .Footer {
   border-top: 1px solid #ccc;
@@ -1323,4 +1372,27 @@ body {
 .FooterText-date {
   font-size: 22pt;
   color: #ccc;
+}
+.NumberList {
+  font-size: 11pt;
+  font-weight: 500;
+  padding: 0 0 10px 0;
+  counter-reset: myCounter;
+}
+.NumberList-item {
+  list-style: none;
+  line-height: 22px;
+  padding-bottom: 5px;
+}
+.NumberList-item:before {
+  counter-increment: myCounter;
+  content: counter(myCounter) '.';
+  color: #ccc;
+  font-weight: bold;
+  font-size: 9pt;
+  padding-right: 4px;
+}
+.NumberList-item a {
+  text-decoration: underline;
+  color: #ffa352;
 }

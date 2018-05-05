@@ -1,12 +1,55 @@
 .TextSection {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px 0;
 
-  &-header {
-
+  &-paragraph {
+    font-weight: 500;
+    font-size: 11pt;
+    padding-bottom: 10px;
   }
 
-  &-textBlock {
-    column-count: 3;
-    column-gap: 20px;
-    text-align: justify;
+  &-leftLineText {
+    border-left: 2px solid #ffa352;
+    padding-left: 10px;
+    margin: 10px 0;
+    color: #ffa352;
+    font-weight: bold;
+    font-size: 11pt;
+  }
+
+  &-blockquote {
+    font-style: italic;
+    color: #ccc;
+    font-size: 11pt;
+    position: relative;
+    padding: 10px 15px 10px 10px;
+
+    &:before {
+      position: absolute;
+      top: -5px;
+      left: -13px;
+      color: #bbb;
+      content: "\201C";
+      font-style: normal;
+      font-size: 46pt;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -38px;
+      right: -5px;
+      color: #bbb;
+      content: "\201D";
+      font-style: normal;
+      font-size: 46pt;
+    }
+  }
+
+  &-link {
+    display: block;
+    text-align: right;
+    padding: 20px 0;
+    color: #ffa352;
   }
 }
