@@ -895,6 +895,11 @@ body {
 .UserList-sliderWrap {
   max-width: 400px;
 }
+.UserList-tabsWrap {
+  width: 400px;
+  padding: 10px 10px 10px 70px;
+  height: 180px;
+}
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1033,7 +1038,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-  left: -40px;
+  left: -30px;
 }
 [dir="rtl"] .slick-prev {
   left: auto;
@@ -1046,7 +1051,7 @@ body {
   content: "▶";
 }
 .slick-next {
-  right: -40px;
+  right: -30px;
 }
 [dir="rtl"] .slick-next {
   left: -25px;
@@ -1121,4 +1126,38 @@ body {
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 30px;
+  box-sizing: border-box;
+}
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 16px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 150px;
 }
