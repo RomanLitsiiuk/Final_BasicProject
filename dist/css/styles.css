@@ -1129,35 +1129,159 @@ body {
 }
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #fff;
   height: 30px;
+  display: -ms-flexbox;
+  display: flex;
   box-sizing: border-box;
 }
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   float: left;
-  border: none;
+  /*border: none;*/
   outline: none;
   cursor: pointer;
   padding: 7px 16px;
   transition: 0.3s;
   box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #ccc;
 }
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #fff;
 }
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #fff;
+  border-bottom: none;
+  color: #ff921e;
 }
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
+  /*padding: 6px 12px;*/
   border: 1px solid #ccc;
   border-top: none;
   height: 150px;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 1px 0.4px 2px #000000;
+  box-sizing: border-box;
+}
+.ActiveTabWrap {
+  display: -ms-flexbox;
+  display: flex;
+}
+.ActiveTabWrap-progressBar {
+  -ms-flex: 1 0 240px;
+      flex: 1 0 240px;
+}
+.ActiveTabWrap-progressCircle {
+  -ms-flex: 1 0 160px;
+      flex: 1 0 160px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  box-sizing: border-box;
+  padding: 15px 25px 15px 45px;
+}
+.ActiveTabWrap-progressCircle--circleSize {
+  width: 90px;
+  height: 90px;
+}
+.ActiveTabWrap-progressCircle--starsSize {
+  padding-top: 10px;
+  width: 90px;
+  height: auto;
+}
+.ProgressLine {
+  padding: 20px 5px 10px 10px;
+}
+.ProgressLine-line {
+  /* Fx 3.6+ */
+  /* Chrome 10+,Safari 5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #333, #999);
+  /* W3C */
+  border: 1px solid #333;
+  /* Рамка */
+  height: 15px;
+  /* Высота */
+  border-radius: 5px;
+  /* Радиус скругления */
+  position: relative;
+  /* Относительное позиционирование */
+  overflow: hidden;
+  /* Прячем ненужную тень */
+}
+.ProgressLine-line::before {
+  content: '';
+  position: absolute;
+  /* Абсолютное позиционирование */
+  top: 1px;
+  left: 1px;
+  height: 11px;
+  width: 120px;
+  background: #ffa40a;
+  /* Для старых браузеров */
+  /* Fx 3.6+ */
+  /* Chrome 10+,Safari 5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffa40a, #ff8d00 50%, #ffa40a);
+  /* W3C */
+  border: 1px solid #ff8d00;
+  /* Рамка */
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
+  /* Тень справа */
+  border-radius: 4px;
+}
+@supports (--css: variables) {
+  input[type="range"].multirange {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  input[type="range"].multirange.original {
+    position: absolute;
+  }
+  input[type="range"].multirange.original::-webkit-slider-thumb {
+    position: relative;
+    z-index: 2;
+  }
+  input[type="range"].multirange.original::-moz-range-thumb {
+    transform: scale(1);
+    /* FF doesn't apply position it seems */
+    z-index: 1;
+  }
+  input[type="range"].multirange::-moz-range-track {
+    border-color: transparent;
+    /* needed to switch FF to "styleable" control */
+  }
+  input[type="range"].multirange.ghost {
+    position: relative;
+    background: var(--track-background);
+    --track-background: linear-gradient(to right, transparent var(--low), var(--range-color) 0, var(--range-color) var(--high), transparent 0) no-repeat 0 0.45% 40%;
+    --range-color: #149cb8;
+  }
+  input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
+    background: var(--track-background);
+  }
+  input[type="range"].multirange.ghost::-moz-range-track {
+    background: var(--track-background);
+  }
+}
+.MultirangeBlock {
+  padding: 20px 5px 20px 10px;
+  width: 225px;
+}
+.MultirangeBlock-line {
+  width: 225px;
+}
+.ActiveButtons {
+  padding: 10px 5px 10px 10px;
 }

@@ -1,0 +1,26 @@
+.ActiveTabWrap {
+  display: flex;
+
+  &-progressBar {
+    flex: 1 0 240px;
+  }
+
+  &-progressCircle {
+    flex: 1 0 160px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 15px 25px 15px 45px;
+
+    &--circleSize {
+      width: 90px;
+      height: 90px;
+    }
+
+    &--starsSize {
+      padding-top: 10px;
+      width: 90px;
+      height: auto;
+    }
+  }
+}
