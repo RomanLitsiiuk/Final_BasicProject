@@ -140,6 +140,13 @@ body {
   position: relative;
   z-index: 10;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 960px) {
+  .Registration {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
 }
 .Registration-sliderWrap {
   box-sizing: border-box;
@@ -236,6 +243,7 @@ body {
   max-width: 100%;
   overflow: hidden;
   position: relative;
+  width: 480px;
 }
 .lSSlideWrapper > .lightSlider:after {
   clear: both;
@@ -885,10 +893,8 @@ body {
   padding: 20px 0;
 }
 .UserList-sliderWrap {
-  /*width: 50%;
-    margin: 100px auto;*/
+  max-width: 400px;
 }
-/*@import "Modules/Lightslider2";*/
 /* Slider */
 .slick-slider {
   position: relative;
@@ -903,7 +909,6 @@ body {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
-  /*max-width: inherit;*/
 }
 .slick-list {
   position: relative;
@@ -945,6 +950,7 @@ body {
 }
 .slick-slide {
   float: left;
+  padding-left: 5px;
   height: 100%;
   min-height: 1px;
   display: none;
@@ -1018,47 +1024,39 @@ body {
 }
 .slick-prev:before,
 .slick-next:before {
-  font-family: "slick";
+  font-family: bold;
   font-size: 20px;
   line-height: 1;
-  color: white;
+  color: black;
   opacity: 0.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Icons */
-}
-@font-face {
-  font-family: 'slick';
-  font-weight: normal;
-  font-style: normal;
-  src: url('fonts/slick.eot');
-  src: url('fonts/slick.eot?#iefix') format('embedded-opentype'), url('fonts/slick.woff') format('woff'), url('fonts/slick.ttf') format('truetype'), url('fonts/slick.svg#slick') format('svg');
 }
 .slick-prev {
-  left: -25px;
+  left: -40px;
 }
 [dir="rtl"] .slick-prev {
   left: auto;
   right: -25px;
 }
 .slick-prev:before {
-  content: "←";
+  content: "◀";
 }
 [dir="rtl"] .slick-prev:before {
-  content: "→";
+  content: "▶";
 }
 .slick-next {
-  right: -25px;
+  right: -40px;
 }
 [dir="rtl"] .slick-next {
   left: -25px;
   right: auto;
 }
 .slick-next:before {
-  content: "→";
+  content: "▶";
 }
 [dir="rtl"] .slick-next:before {
-  content: "←";
+  content: "◀";
 }
 /* Dots */
 .slick-dotted .slick-slider {
@@ -1111,7 +1109,7 @@ body {
   content: "•";
   width: 20px;
   height: 20px;
-  font-family: "slick";
+  font-family: bold;
   font-size: 6px;
   line-height: 20px;
   text-align: center;
