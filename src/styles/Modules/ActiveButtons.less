@@ -1,7 +1,19 @@
 .ActiveButtons {
-  padding: 10px 5px 10px 10px;
+  padding: 10px 5px 10px 20px;
+  display: flex;
+  justify-content: space-between;
 
   &-button {
+    border: 1px solid #ccc;
+    padding: 7px 3px;
+    font-size: 11pt;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5),
+      -5px -5px 12px rgba(0,0,0,0.1) inset;
+    color: #000;
 
+    &:hover {
+      background: #ffa40a;
+    }
   }
 }
