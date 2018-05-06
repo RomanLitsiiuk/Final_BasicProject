@@ -18,16 +18,16 @@
                 <div class="Registration u-container">
                     <ul id="lightSlider" class="Registration-sliderWrap">
                         <li>
-                            <img src="src/images/slider_top/slide.jpg">
+                            <img src="src/images/slider_top/slide.jpg" alt="big slide 1">
                         </li>
                         <li>
-                            <img src="src/images/slider_top/slide1.jpg">
+                            <img src="src/images/slider_top/slide1.jpg" alt="big slide 2">
                         </li>
                         <li>
-                            <img src="src/images/slider_top/slide3.jpg">
+                            <img src="src/images/slider_top/slide3.jpg" alt="big slide 3">
                         </li>
                         <li>
-                            <img src="src/images/slider_top/slide4.jpg">
+                            <img src="src/images/slider_top/slide4.jpg" alt="big slide 4">
                         </li>
                     </ul>
                     <div class="Registration-formWrap">
@@ -48,7 +48,7 @@
                                         <input class="GenderRadioBtn-femaleBtn" type="radio" name="userGender">
                                         <input class="GenderRadioBtn-maleBtn" type="radio" name="userGender">
                                     </div>
-                                    <img class="Gender-searchIcon" src="src/images/icons/magnifier.png">
+                                    <img class="Gender-searchIcon" src="src/images/icons/magnifier.png" alt="magnifier">
                                     <p class="Gender-searchText">looking for</p>
                                     <div class="GenderRadioBtn">
                                         <input class="GenderRadioBtn-femaleBtn" type="radio" name="searchGender">
@@ -59,30 +59,92 @@
                                     <input class="Name-nameField" type="text">
                                 </div>
                                 <div class="Age u-formpadding">
-                                    <select class="Age-day">
-                                        <option>25</option>
-                                        <option>30</option>
-                                    </select>
-                                    <select class="Age-month">
-                                        <option>May</option>
-                                        <option>April</option>
-                                    </select>
-                                    <select class="Age-year">
-                                        <option>1992</option>
-                                        <option>2008</option>
-                                    </select>
+                                    <div class="select">
+                                        <a href="javascript:void(0);" class="slct Age-day">12</a>
+                                        <ul class="drop Age-day--dropWidth">
+                                            <li><a href="">1</a></li>
+                                            <li><a href="">2</a></li>
+                                            <li><a href="">3</a></li>
+                                            <li><a href="">4</a></li>
+                                            <li><a href="">5</a></li>
+                                            <li><a href="">6</a></li>
+                                            <li><a href="">7</a></li>
+                                            <li><a href="">8</a></li>
+                                            <li><a href="">9</a></li>
+                                            <li><a href="">10</a></li>
+                                            <li><a href="">11</a></li>
+                                            <li><a href="">12</a></li>
+                                            <li><a href="">13</a></li>
+                                            <li><a href="">14</a></li>
+                                            <li><a href="">15</a></li>
+                                            <li><a href="">16</a></li>
+                                            <li><a href="">17</a></li>
+                                            <li><a href="">18</a></li>
+                                            <li><a href="">19</a></li>
+                                            <li><a href="">20</a></li>
+                                            <li><a href="">21</a></li>
+                                            <li><a href="">22</a></li>
+                                            <li><a href="">23</a></li>
+                                            <li><a href="">24</a></li>
+                                            <li><a href="">25</a></li>
+                                            <li><a href="">26</a></li>
+                                            <li><a href="">27</a></li>
+                                            <li><a href="">28</a></li>
+                                            <li><a href="">29</a></li>
+                                            <li><a href="">30</a></li>
+                                        </ul>
+                                        <input type="hidden" id="select">
+                                    </div>
+                                    <div class="select">
+                                        <a href="javascript:void(0);" class="slct Age-month">october</a>
+                                        <ul class="drop Age-month--dropWidth">
+                                            <li><a href="">january</a></li>
+                                            <li><a href="">february</a></li>
+                                            <li><a href="">march</a></li>
+                                            <li><a href="">april</a></li>
+                                            <li><a href="">may</a></li>
+                                            <li><a href="">june</a></li>
+                                            <li><a href="">july</a></li>
+                                            <li><a href="">august</a></li>
+                                            <li><a href="">september</a></li>
+                                            <li><a href="">october</a></li>
+                                            <li><a href="">november</a></li>
+                                            <li><a href="">december</a></li>
+                                        </ul>
+                                        <input type="hidden" id="select">
+                                    </div>
+                                    <div class="select">
+                                        <a href="javascript:void(0);" class="slct Age-year">1984</a>
+                                        <ul class="drop Age-year--dropWidth">
+                                            <li><a href="">1950</a></li>
+                                            <li><a href="">1960</a></li>
+                                            <li><a href="">1970</a></li>
+                                            <li><a href="">1980</a></li>
+                                            <li><a href="">1990</a></li>
+                                            <li><a href="">2000</a></li>
+                                            <li><a href="">2010</a></li>
+                                            <li><a href="">2020</a></li>
+                                        </ul>
+                                        <input type="hidden" id="select">
+                                    </div>
                                 </div>
-                                <div class="City u-formpadding">
-                                    <select class="City-checkField">
-                                        <option>Vancouver</option>
-                                        <option>Bratislava</option>
-                                        <option>Springfield</option>
-                                        <option>Marocco</option>
-                                        <option>Mexico</option>
-                                        <option>Ryadh</option>
-                                        <option>Namche-bazar</option>
-                                        <option>Gviana</option>
-                                    </select>
+                                <div class="City">
+                                    <div class="select">
+                                        <a href="javascript:void(0);" class="slct City-checkField">London</a>
+                                        <ul class="drop City-checkField--dropWidth ">
+                                            <li><a href="">Vancouver</a></li>
+                                            <li><a href="">Bratislava</a></li>
+                                            <li><a href="">Springfield</a></li>
+                                            <li><a href="">Marocco</a></li>
+                                            <li><a href="">Ryadh</a></li>
+                                            <li><a href="">Namche-bazar</a></li>
+                                            <li><a href="">Ingolstadt</a></li>
+                                            <li><a href="">Memmingen</a></li>
+                                            <li><a href="">Nurnberg</a></li>
+                                            <li><a href="">Salzburg</a></li>
+                                        </ul>
+                                        <input type="hidden" id="select">
+                                    </div>
                                 </div>
                                 <div class="AdditionalInfo">
                                     <div class="AdditionalInfo-checkBoxBlock">
@@ -115,7 +177,7 @@
                     </div>
                 </div>
                 <div class="RegistrationBackground-shadowWrap">
-                    <img class="RegistrationBackground-shadow" src="src/images/shadow.png">
+                    <img class="RegistrationBackground-shadow" src="src/images/shadow.png" alt="shadow">
                 </div>
             </section>
             <section class="CentralBlock u-container">
@@ -139,28 +201,28 @@
                         <h2 class="UserList-header u-paddingT20B20">User List</h2>
                         <section id="slider2" class="UserList-sliderWrap">
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide1">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide2">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide3">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide4">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide5">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide6">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide7">
                             </div>
                             <div>
-                                <img src="src/images/SliderGirl.jpg">
+                                <img src="src/images/SliderGirl.jpg" alt="slide8">
                             </div>
                         </section>
                         <div class="UserList-tabs"></div>
@@ -248,7 +310,7 @@
         </main>
         <footer class="MainMarkup-footer u-container">
             <div class="Footer">
-                <img class="Footer-image" src="src/images/footer/logo%20copy.png">
+                <img class="Footer-image" src="src/images/footer/logo%20copy.png" alt="logo">
                 <div class="Footer-text">
                     <div class="FooterText">
                         <p class="FooterText-name"><span class="FooterText-name--abbr">VD</span> Web Coder Test Task</p>

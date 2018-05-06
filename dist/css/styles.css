@@ -703,6 +703,75 @@ body {
 .Name-validField {
   width: 40px;
 }
+.slct {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14pt;
+  color: #000;
+  margin-bottom: -4px;
+  position: relative;
+}
+.slct:after {
+  content: '▼';
+  border: 1px solid #ccc;
+  border-radius: 0 18px 18px 0;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  height: 36px;
+  width: 36px;
+  font-size: 10pt;
+  text-align: right;
+  padding: 9px 13px 0 0;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: -2px -5px 8px rgba(0, 0, 0, 0.1) inset, -1px 0 2px rgba(0, 0, 0, 0.7) inset;
+}
+.slct.active {
+  box-sizing: border-box;
+  height: 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+  border-bottom: none;
+  text-decoration: none;
+}
+.drop {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: auto;
+  box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+  border: 1px solid #cecece;
+  border-radius: 0 0 18px 18px;
+  border-top: none;
+  display: none;
+  position: absolute;
+  background: #fff;
+  text-decoration: none;
+}
+.drop li {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  color: #444;
+  text-align: center;
+  padding: 1px 0;
+  background-position: 10px -119px;
+}
+.drop li a {
+  text-decoration: none;
+  font-size: 14pt;
+  color: #000;
+}
+.drop li:hover {
+  background-color: #e8e8e8;
+  color: #222;
+}
 .Age {
   width: 100%;
   display: -ms-flexbox;
@@ -713,7 +782,8 @@ body {
       justify-content: space-between;
 }
 .Age-day {
-  padding-left: 14px;
+  padding-left: 14px ;
+  padding-top: 5px;
   width: 85px;
   box-sizing: border-box;
   height: 36px;
@@ -721,8 +791,13 @@ body {
   border-radius: 18px;
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
+.Age-day--dropWidth {
+  width: 85px;
+  z-index: 99;
+}
 .Age-month {
   padding-left: 14px;
+  padding-top: 5px;
   width: 120px;
   box-sizing: border-box;
   height: 36px;
@@ -730,8 +805,13 @@ body {
   border-radius: 18px;
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
+.Age-month--dropWidth {
+  width: 120px;
+  z-index: 99;
+}
 .Age-year {
   padding-left: 14px;
+  padding-top: 5px;
   width: 105px;
   box-sizing: border-box;
   height: 36px;
@@ -739,21 +819,27 @@ body {
   border-radius: 18px;
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
+.Age-year--dropWidth {
+  width: 105px;
+  z-index: 99;
+}
 .City {
   width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  padding: 7px 0;
 }
 .City-checkField {
   padding-left: 12px;
+  padding-top: 5px;
   width: 100%;
   box-sizing: border-box;
   height: 36px;
   border: 1px solid #d8d8d8;
   border-radius: 18px;
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+.City-checkField--dropWidth {
+  width: 320px;
+  z-index: 10;
 }
 .AdditionalInfo {
   width: 100%;
@@ -1205,7 +1291,7 @@ body {
   height: auto;
 }
 .ProgressLine {
-  padding: 20px 5px 10px 10px;
+  padding: 20px 5px 10px 20px;
 }
 .ProgressLine-line {
   /*background: linear-gradient(to bottom, #333, #999);*/
