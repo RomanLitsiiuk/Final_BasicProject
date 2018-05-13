@@ -970,7 +970,6 @@ body {
   box-shadow: 0 16px 16px 6px rgba(0, 0, 0, 0.06) inset, 0 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .slct {
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -978,7 +977,6 @@ body {
   text-decoration: none;
   font-size: 14pt;
   color: #000;
-  margin-bottom: -4px;
   position: relative;
 }
 .slct:after {
@@ -1046,6 +1044,7 @@ body {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  box-sizing: border-box;
 }
 .Age-day {
   padding-left: 14px ;
